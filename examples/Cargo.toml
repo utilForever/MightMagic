@@ -1,0 +1,12 @@
+[package]
+name = "examples"
+version = "0.1.0"
+authors = ["Chris Ohk <utilforever@gmail.com>"]
+edition = "2018"
+
+[dependencies.mightmagic]
+path = "../build/mightmagic"
+
+[[bin]]
+name = "mightmagic_console"
+path = "mightmagic_console.rs" 

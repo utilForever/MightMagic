@@ -1,0 +1,16 @@
+[package]
+name = "mightmagic"
+version = "0.1.0"
+authors = ["Chris Ohk <utilforever@gmail.com>"]
+description = "Heroes of Might and Magic 3 simulator using Rust with some reinforcement learning."
+repository = "https://github.com/utilforever/MightMagic"
+readme = "README.md"
+keywords = [ "HOMM", "Heroes of Might and Magic", "RL", "Reinforcement Learning", "simulations" ]
+license = "MIT"
+edition = "2018"
+
+[lib]
+name = "mightmagic"
+path = "../../src/lib.rs"
+
+[dependencies]
