@@ -1,2 +1,2 @@
 [workspace]
-members = [ "build/mightmagic", "examples" ] 
+members = [ "src", "examples" ] 
