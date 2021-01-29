@@ -49,3 +49,17 @@ impl FactionLoader {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_load()
+    {
+        let mut factions: Vec<Faction> = Vec::new();
+        FactionLoader::load(&mut factions, "../res/factions/castle.json", "castle");
+
+        assert_eq!(factions.len(), 7);
+    }
+}
