@@ -1,3 +1,11 @@
+use mightmagic::loaders::faction_loader::FactionLoader;
+use mightmagic::models::faction::Faction;
+
 fn main() {
-    println!("Hello, world!");
+    let mut factions: Vec<Faction> = Vec::new();
+    FactionLoader::load(&mut factions, "res/factions/castle.json", "castle");
+
+    for faction in factions {
+        println!("{}, {}", faction.creatures.0, faction.creatures.1);
+    }
 }
