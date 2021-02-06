@@ -1,7 +1,7 @@
 #[derive(Clone)]
 pub struct Faction {
     pub name: String,
-    pub creatures: (String, String),
+    pub creatures: Vec<(String, String)>,
 }
 
 impl Faction {
@@ -9,7 +9,7 @@ impl Faction {
     pub const fn new(name: String) -> Faction {
         Faction {
             name: name,
-            creatures: (String::new(), String::new()),
+            creatures: Vec::new(),
         }
     }
 }

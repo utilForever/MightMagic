@@ -93,8 +93,10 @@ impl FactionLoader {
             .unwrap();
         for creature in creatures {
             let pair: &Vec<Value> = creature.as_array().unwrap();
-            faction.creatures.0 = String::from(pair[0].as_str().unwrap());
-            faction.creatures.1 = String::from(pair[1].as_str().unwrap());
+            faction.creatures.push((
+                String::from(pair[0].as_str().unwrap()),
+                String::from(pair[1].as_str().unwrap()),
+            ));
         }
 
         factions.push(faction);
