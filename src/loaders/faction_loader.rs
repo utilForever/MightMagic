@@ -85,7 +85,7 @@ impl FactionLoader {
             Ok(s) => s,
         };
 
-        let mut faction: Faction = Faction::new();
+        let mut faction: Faction = Faction::new(String::from(faction_name));
 
         // Parse creatures data from an value
         let creatures: &Vec<Value> = json_str[faction_name]["town"]["creatures"]
