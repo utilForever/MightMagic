@@ -86,19 +86,19 @@ impl FactionLoader {
             Ok(s) => s,
         };
 
+        let mut faction: Faction = Faction::new();
+
         // Parse creatures data from an value
         let creatures: &Vec<Value> = json_str[faction_name]["town"]["creatures"]
             .as_array()
             .unwrap();
         for creature in creatures {
-            let mut faction: Faction = Faction::new();
-
             let pair: &Vec<Value> = creature.as_array().unwrap();
             faction.creatures.0 = String::from(pair[0].as_str().unwrap());
             faction.creatures.1 = String::from(pair[1].as_str().unwrap());
-
-            factions.push(faction);
         }
+
+        factions.push(faction);
     }
 }
 
@@ -111,6 +111,6 @@ mod tests {
         let mut factions: Vec<Faction> = Vec::new();
         FactionLoader::load(&mut factions);
 
-        assert_eq!(factions.len(), 7);
+        assert_eq!(factions.len(), 9);
     }
 }
