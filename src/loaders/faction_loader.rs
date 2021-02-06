@@ -54,13 +54,11 @@ impl FactionLoader {
         res_path.push("stronghold.json");
         FactionLoader::load_internal(factions, res_path.as_path(), "stronghold");
         res_path.pop();
-        
+
         // Tower
         res_path.push("tower.json");
         FactionLoader::load_internal(factions, res_path.as_path(), "tower");
         res_path.pop();
-
-        println!("{}", res_path.display());
     }
 
     fn load_internal(factions: &mut Vec<Faction>, filename: &Path, faction_name: &str) {
@@ -73,6 +71,7 @@ impl FactionLoader {
             Err(why) => panic!("couldn't open {}: {}", display, why),
             Ok(file) => file,
         };
+        
         // Read the file contents into a string, returns `io::Result<usize>`
         let mut str = String::new();
         match file.read_to_string(&mut str) {
