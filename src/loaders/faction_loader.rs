@@ -71,7 +71,7 @@ impl FactionLoader {
             Err(why) => panic!("couldn't open {}: {}", display, why),
             Ok(file) => file,
         };
-        
+
         // Read the file contents into a string, returns `io::Result<usize>`
         let mut str = String::new();
         match file.read_to_string(&mut str) {

@@ -17,8 +17,7 @@ impl ResourceManager {
         FactionLoader::load(&mut FACTIONS.lock().unwrap());
     }
 
-    pub fn get_all_factions() -> Vec<Faction>
-    {
+    pub fn get_all_factions() -> Vec<Faction> {
         return FACTIONS.lock().unwrap().to_vec();
     }
 }
