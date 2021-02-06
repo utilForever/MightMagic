@@ -14,8 +14,50 @@ impl FactionLoader {
     pub fn load(factions: &mut Vec<Faction>) {
         let mut res_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
         res_path.push("../res/factions/");
+
+        // Castle
         res_path.push("castle.json");
         FactionLoader::load_internal(factions, res_path.as_path(), "castle");
+        res_path.pop();
+
+        // Conflux
+        res_path.push("conflux.json");
+        FactionLoader::load_internal(factions, res_path.as_path(), "conflux");
+        res_path.pop();
+
+        // Dungeon
+        res_path.push("dungeon.json");
+        FactionLoader::load_internal(factions, res_path.as_path(), "dungeon");
+        res_path.pop();
+
+        // Fortress
+        res_path.push("fortress.json");
+        FactionLoader::load_internal(factions, res_path.as_path(), "fortress");
+        res_path.pop();
+
+        // Inferno
+        res_path.push("inferno.json");
+        FactionLoader::load_internal(factions, res_path.as_path(), "inferno");
+        res_path.pop();
+
+        // Necropolis
+        res_path.push("necropolis.json");
+        FactionLoader::load_internal(factions, res_path.as_path(), "necropolis");
+        res_path.pop();
+
+        // Rampart
+        res_path.push("rampart.json");
+        FactionLoader::load_internal(factions, res_path.as_path(), "rampart");
+        res_path.pop();
+
+        // Stronghold
+        res_path.push("stronghold.json");
+        FactionLoader::load_internal(factions, res_path.as_path(), "stronghold");
+        res_path.pop();
+        
+        // Tower
+        res_path.push("tower.json");
+        FactionLoader::load_internal(factions, res_path.as_path(), "tower");
         res_path.pop();
 
         println!("{}", res_path.display());
