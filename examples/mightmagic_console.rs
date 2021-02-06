@@ -3,8 +3,7 @@ use mightmagic::managers::resource_manager::ResourceManager;
 fn print_splash() {
     println!(
         "{}",
-        "
-     __  __ _       _     _   __  __             _      
+        "     __  __ _       _     _   __  __             _      
     |  \\/  (_)     | |   | | |  \\/  |           (_)     
     | \\  / |_  __ _| |__ | |_| \\  / | __ _  __ _ _  ___ 
     | |\\/| | |/ _` | '_ \\| __| |\\/| |/ _` |/ _` | |/ __|

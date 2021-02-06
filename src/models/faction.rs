@@ -6,9 +6,9 @@ pub struct Faction {
 
 impl Faction {
     #[inline]
-    pub const fn new(name: String) -> Faction {
+    pub const fn new(_name: String) -> Faction {
         Faction {
-            name: name,
+            name: _name,
             creatures: Vec::new(),
         }
     }

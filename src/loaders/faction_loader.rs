@@ -74,9 +74,8 @@ impl FactionLoader {
 
         // Read the file contents into a string, returns `io::Result<usize>`
         let mut str = String::new();
-        match file.read_to_string(&mut str) {
-            Err(why) => panic!("couldn't read {}: {}", display, why),
-            Ok(_) => (),
+        if let Err(why) = file.read_to_string(&mut str) {
+            panic!("couldn't read {}: {}", display, why)
         }
 
         // Deserialize an value from a string of JSON text
