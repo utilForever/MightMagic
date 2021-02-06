@@ -11,6 +11,8 @@ edition = "2018"
 
 [lib]
 name = "mightmagic"
-path = "../../src/lib.rs"
+path = "lib.rs"
 
 [dependencies]
+serde_json="1.0.61"
+lazy_static="1.4.0"

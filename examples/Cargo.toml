@@ -5,7 +5,7 @@ authors = ["Chris Ohk <utilforever@gmail.com>"]
 edition = "2018"
 
 [dependencies.mightmagic]
-path = "../build/mightmagic"
+path = "../src"
 
 [[bin]]
 name = "mightmagic_console"
